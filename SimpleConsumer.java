@@ -27,14 +27,14 @@ public class SimpleConsumer {
          <String, String>(props);
       
       //Kafka Consumer subscribes list of topics here.
-      consumer.subscribe(Arrays.asList(topicName))
+      consumer.subscribe(Arrays.asList(topicName));
       
       //print the topic name
       System.out.println("Subscribed to topic " + topicName);
       int i = 0;
       
       while (true) {
-         ConsumerRecords<String, String> records = con-sumer.poll(100);
+         ConsumerRecords<String, String> records = consumer.poll(100);
          for (ConsumerRecord<String, String> record : records)
          
          // print the offset,key and value for the consumer records.
